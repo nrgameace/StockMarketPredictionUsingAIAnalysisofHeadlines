@@ -84,4 +84,26 @@ The **core training pipeline**:
 ```python
 Enter the article title: "Donald Trump has announced that he will get rid of tariffs impacting China"
 → Market Increases
+```
+## Installation and Setup
 
+1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/StockMarketPredictionUsingAIAnalysisofHeadlines.git
+cd StockMarketPredictionUsingAIAnalysisofHeadlines
+```
+2. Create Virtual Environment
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# or
+venv\Scripts\activate     # Windows
+```
+3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+4. Run the Tester
+```bash
+jupyter notebook Tester.ipynb
+```

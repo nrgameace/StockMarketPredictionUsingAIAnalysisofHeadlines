@@ -1,0 +1,9 @@
+torch>=2.0
+sentence-transformers
+xgboost
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+tqdm
