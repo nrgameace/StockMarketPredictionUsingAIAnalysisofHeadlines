@@ -107,3 +107,32 @@ pip install -r requirements.txt
 ```bash
 jupyter notebook Tester.ipynb
 ```
+
+## How It Works (Technical Deep Dive)
+
+### 1. Text to Vector
+- Each headline is encoded into a dense **384-dimensional embedding** using `all-MiniLM-L6-v2`, a lightweight but powerful sentence transformer.
+
+### 2. Label Creation
+- **Label = 1** if `close > open`, else **0**.
+
+### 3. Balanced Training
+- Subsampled to prevent bias toward frequent market directions.
+
+### 4. XGBoost on GPU
+- **Parameters:**
+  - `tree_method='gpu_hist'`  
+  - `n_estimators=1500`  
+  - `max_depth=10`  
+  - Early stopping after 40 rounds
+
+### 5. Inference
+- Pipeline: **New headline → embedding → XGBoost → Up / Down prediction**
+
+## Contact Me
+
+Feel free to reach out!
+
+[![GitHub](https://img.shields.io/badge/GitHub-nickregas-black?logo=github)](https://github.com/nrgameace)  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nickolas_Regas-blue?logo=linkedin)](www.linkedin.com/in/nick-regas-b051802b3)  
+[![Email](https://img.shields.io/badge/Email-nickregas%40example.com-red?logo=gmail)](mailto:n.a.regas@wustl.com)
