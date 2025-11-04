@@ -7,7 +7,6 @@
 [![XGBoost](https://img.shields.io/badge/XGBoost-1.7-orange?logo=xgboost&logoColor=white)](#)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0-red?logo=pytorch&logoColor=white)](#)
 [![Sentence Transformers](https://img.shields.io/badge/Sentence_Transformers-all--MiniLM--L6--v2-green)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
@@ -35,20 +34,20 @@ This project **predicts daily price movements of the Vanguard Total Stock Market
 
 ## Model Performance
 
-The trained **XGBoost model achieved strong predictive performance** on unseen test data:
+The trained **XGBoost model achieved relatively accurate performance** on unseen test data:
 
 | Metric                 | Value |
 |------------------------|-------|
-| **Test Accuracy**      | **78.4%** |
-| **True Positives (Up)**| 19,453 |
-| **True Negatives (Down)** | 19,135 |
-| **False Positives**    | 15,475 |
-| **False Negatives**    | 15,157 |
+| **Test Accuracy**      | **56%** |
+| **True Positives (Up)**| 191,348 |
+| **True Negatives (Down)** | 194,533 |
+| **False Positives**    | 154,754 |
+| **False Negatives**    | 151,569 |
 
 ### Confusion Matrix
 ![GPU Stock Prediction Performance](gpu_confusion_matrix2.png)
 
-> *The model correctly classifies **38,588 out of 69,220** test samples — demonstrating robust generalization.*
+> *The model correctly classifies **385,881 out of 692,204** test samples — demonstrating moderately accurate generalization.*
 
 ---
 
@@ -135,4 +134,4 @@ Feel free to reach out!
 
 [![GitHub](https://img.shields.io/badge/GitHub-nickregas-black?logo=github)](https://github.com/nrgameace)  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Nickolas_Regas-blue?logo=linkedin)](www.linkedin.com/in/nick-regas-b051802b3)  
-[![Email](https://img.shields.io/badge/Email-nickregas%40example.com-red?logo=gmail)](mailto:n.a.regas@wustl.com)
+[![Email](https://img.shields.io/badge/Email-n.a.regas%40wustl.edu-red?logo=gmail)](mailto:n.a.regas@wustl.com)
