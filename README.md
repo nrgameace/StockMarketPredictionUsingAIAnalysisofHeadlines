@@ -53,11 +53,13 @@ The trained **XGBoost model achieved strong predictive performance** on unseen t
 ---
 
 ## Project Architecture
+'''
 ├── FinalModel.ipynb          → Data pipeline, embedding, training
 ├── Tester.ipynb              → Inference tool for new headlines
 ├── gpu_stock_model2.json     → Trained XGBoost model
 ├── gpu_confusion_matrix2.png → Performance visualization
 └── Data/                     → Raw & processed datasets
+'''
 
 
 ---
