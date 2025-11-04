@@ -53,3 +53,33 @@ The trained **XGBoost model achieved strong predictive performance** on unseen t
 ---
 
 ## Project Architecture
+├── FinalModel.ipynb          → Data pipeline, embedding, training
+├── Tester.ipynb              → Inference tool for new headlines
+├── gpu_stock_model2.json     → Trained XGBoost model
+├── gpu_confusion_matrix2.png → Performance visualization
+└── Data/                     → Raw & processed datasets
+
+
+---
+
+## File Descriptions
+
+### `FinalModel.ipynb`
+The **core training pipeline**:
+1. **Data Ingestion** – Loads news headlines and VTI price data  
+2. **Preprocessing** – Aligns dates, computes daily change (`close - open`)  
+3. **Balanced Sampling** – Ensures equal representation of `Up` and `Down` days  
+4. **Text Embedding** – Converts headlines into 384-dim vectors using `all-MiniLM-L6-v2`  
+5. **Model Training** – GPU-accelerated XGBoost with early stopping  
+6. **Evaluation & Export** – Saves model + confusion matrix  
+
+### `Tester.ipynb`
+**Interactive prediction tool**:
+- Enter any news headline  
+- Instantly predicts: **Market Increases** or **Market Decreases**  
+- Uses the pre-trained model and same embedding pipeline  
+
+```python
+Enter the article title: "Donald Trump has announced that he will get rid of tariffs impacting China"
+→ Market Increases
+
